@@ -1,0 +1,38 @@
+package newpackage;
+
+
+public class VetorInicio {
+
+    
+    public static void main(String[] args) {
+    
+        Aluno a1 = new Aluno("Rafael", 22, 8, "III Semestre");
+        Aluno a2 = new Aluno("Bernardo");
+        Aluno a3 = new Aluno("Bernardo");
+        Aluno a4 = new Aluno("João", 25, 9, "V Semestre");
+        
+        Vetor lista = new Vetor();
+        
+        lista.adiciona(a1);
+        lista.adiciona(a2);
+        lista.adiciona(a3);
+        
+        System.out.println(lista);
+        System.out.println(lista.tamanho());
+        
+        lista.adiciona(1, a4);
+        
+        System.out.println(lista);
+        System.out.println(lista.tamanho());
+        
+        try
+        {
+            Aluno b = lista.pega(5);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Aluno não existe");
+        }
+    }
+    
+}
